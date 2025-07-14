@@ -1,0 +1,47 @@
+You're comparing two models: **LightGBM** and **Logistic Regression**, based on their train and test accuracy. Here's a breakdown:
+
+---
+
+## 🔢 **Model Comparison**
+
+| Metric         | LightGBM   | Logistic Regression |
+| -------------- | ---------- | ------------------- |
+| Train Accuracy | **0.9517** | 0.9240              |
+| Test Accuracy  | 0.8780     | **0.8798**          |
+
+---
+
+## 🧠 Interpretation
+
+### ✅ **Logistic Regression**
+
+* **Train Accuracy = 0.924**
+* **Test Accuracy = 0.8798**
+* Small gap → **low overfitting**, good generalization
+
+### ⚠️ **LightGBM**
+
+* **Train Accuracy = 0.9517**
+* **Test Accuracy = 0.8780**
+* Bigger gap (\~7.3%) → **possible overfitting**
+
+---
+
+## ✅ **Which Model Should You Choose? → Logistic Regression**
+
+### Why?
+
+* **Better test performance** (slightly higher accuracy)
+* **More stable/generalizable** (smaller train-test gap)
+* **Simpler model** (easier to explain & interpret)
+* Performs well even with just TF-IDF + L1 penalty
+
+---
+
+## 🏁 Final Verdict:
+
+> **Choose Logistic Regression**
+> It generalizes better and slightly outperforms LightGBM on unseen data.
+
+
+

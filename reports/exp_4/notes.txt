@@ -1,0 +1,5 @@
+Observations 
+here max_vec= 3000 & imbalance techinque used is random sampler techinque
+- Accuracy of Logistic Regression is the highest 
+- overall image Random forest,mutinomial,knn are least performing model's
+- 2nd image all model is kind 

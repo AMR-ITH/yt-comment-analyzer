@@ -1,0 +1,7 @@
+for all the 3 class recall ,precession variations is high so 
+i decided to go with unblanced_techinque which gives highest accuracy
+0.673 -- undersampling
+0.674 -- adasyn
+0.671 -- oversampling
+0.675 -- class_weights
+but accuracy might deceive so f1score is considered and found that undersampling gives well balanced results

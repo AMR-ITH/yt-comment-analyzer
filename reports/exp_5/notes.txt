@@ -1,0 +1,15 @@
+## ✅ Summary of Experiment Results
+
+Lgbm,Log reg, SVM,Xgboost different combination of hyperameter where run and best result is  stored
+out of these Lgbm and LogisticRegression` where found to good model 
+
+* **Best Model**: `LogisticRegression`
+
+  * **max\_features = 10,000**
+  * **Accuracy = 0.87931**
+  *  This is the **best result** in the experiment.
+
+* **Effect of `max_features`:**
+
+  * `max_features = 3000` → also gives **good results**, slightly below the best.
+  * `max_features = 1000` → gave the **worst performance** across all runs.

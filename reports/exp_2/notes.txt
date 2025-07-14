@@ -1,0 +1,4 @@
+- in tfidf method 2000,3000,4000 till 5000  the recall ,precession values doesn't varry as much comparred too
+1000,6000,... 10,000 )
+- in bow method the recall and precession values varray arbiratory for all the max features 
+- conclusion tfidf is best with max feature ranging from [2000,3000,4000 till 5000]
