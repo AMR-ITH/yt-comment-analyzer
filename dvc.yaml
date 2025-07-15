@@ -1,0 +1,53 @@
+stages:
+  data_ingestion:
+    cmd: python src/data/data_ingestion.py
+    deps:
+      - src/data/data_ingestion.py
+      - data/raw/reddit.csv     
+    params:
+      - data_ingestion.test_size
+    outs:
+      - data/raw/train_data.csv    
+      - data/raw/test_data.csv
+  data_preprocessing:
+    cmd: python src/data/data_preprocessing.py
+    deps:
+      - src/data/data_preprocessing.py
+      - data/raw/train_data.csv
+      - data/raw/test_data.csv
+    outs:
+      - data/interim/train_processed.csv
+      - data/interim/test_processed.csv
+  
+  model_building:
+    cmd: python src/models/model_building.py
+    deps:
+      - src/models/model_building.py
+      - data/interim/train_processed.csv
+      - data/interim/test_processed.csv
+    outs:
+      - models/logistic_model.pkl
+      - models/tfidf_vectorizer.pkl
+
+  model_evaluation:
+    cmd: python src/models/model_evaluation.py
+    deps:
+      - src/models/model_evaluation.py
+      - models/logistic_model.pkl
+      - models/tfidf_vectorizer.pkl
+      - data/interim/test_processed.csv
+    outs:
+      - experiment_info.json
+    params:
+      - model_building.ngram_range
+      - model_building.max_features
+      - model_building.penalty
+      - model_building.C
+      - model_building.solver
+      - model_building.max_iter
+
+  model_registry:
+    cmd: python src/models/model_registry.py
+    deps:
+      - src/models/model_registry.py
+      - experiment_info.json
