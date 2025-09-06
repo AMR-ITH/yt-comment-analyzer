@@ -1,7 +1,9 @@
 # YouTube Comment Sentiment Analyzer
 A full-stack machine learning application that analyzes YouTube comments in real-time to provide sentiment insights for content creators and social media influencers.
+End-to-end NLP application to classify YouTube comments in real time via a Chrome extension. 
+Built preprocessing + sentiment analysis pipeline with TF-IDF features, served predictions through a Flask REST API, and deployed a full-stack system on Render with DVC + MLflow for versioning and experiment tracking.
 
-![Demo GIF](path/to/your/demo.gif)
+![Demo GIF](img.gif)
 
 ## 🚀 Features
 
