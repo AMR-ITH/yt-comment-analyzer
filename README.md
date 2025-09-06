@@ -1,57 +1,51 @@
-yt-comment-analyzer
-==============================
+# YouTube Comment Sentiment Analyzer
+A full-stack machine learning application that analyzes YouTube comments in real-time to provide sentiment insights for content creators and social media influencers.
 
-Automated YouTube Comment Analysis System for Social Media Influencers using ML and NLP
+![Demo GIF](path/to/your/demo.gif)
 
-Project Organization
-------------
+## 🚀 Features
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+- **Real-time Sentiment Analysis**: Analyze YouTube comments instantly through Chrome extension
+- **High Accuracy Model**: Logistic Regression with 87.98% accuracy and 0.8777 F1-score
+- **Complete MLOps Pipeline**: Full ML lifecycle with experiment tracking and model versioning
+- **Scalable Architecture**: Containerized Flask API with automated CI/CD deployment
+- **Data Version Control**: Reproducible ML workflows with DVC and AWS S3 backend
+- **Chrome Extension**: Seamless YouTube integration for real-time analysis
 
+## 🏗️ System Architecture
 
---------
+```
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│ Chrome Extension│ │ Flask REST API  │ │ ML Pipeline     │
+│ (Frontend UI)   │ │ (Backend)       │ │ (Scikit-learn)  │
+└─────────────────┘ └─────────────────┘ └─────────────────┘
+         │                     │                     │
+         └─────────────────────┼─────────────────────┘
+                               │
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│ MLflow Registry │ │ DVC Pipeline    │ │ AWS S3 Storage  │
+│ (Model Tracking)│ │ (Data Versioning│ │ (Artifacts)     │
+└─────────────────┘ └─────────────────┘ └─────────────────┘
+```
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+## 🛠️ Technology Stack
+
+### Machine Learning & MLOps
+- **Scikit-learn**: Model training and inference
+- **NLTK**: Natural language processing
+- **MLflow**: Experiment tracking, model registry, and lifecycle management
+- **DVC**: Data version control and pipeline orchestration
+- **Optuna**: Hyperparameter optimization with Tree-structured Parzen Estimator
+
+### Backend & Deployment
+- **Flask**: RESTful API development
+- **Docker**: Containerization for consistent deployments
+- **AWS S3**: Cloud storage for datasets and model artifacts
+- **GitHub Actions**: Automated CI/CD pipeline
+- **Render**: Cloud deployment platform
+
+### Frontend & Integration
+- **Chrome Extension**: Browser integration for YouTube
+- **JavaScript**: Frontend logic and DOM manipulation
+- **HTML/CSS**: User interface design
+
